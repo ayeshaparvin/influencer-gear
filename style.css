@@ -2,17 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins&display=swap');
 *{
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+    
 }
 body{
+    padding: 0;
+    margin: 0;
     font-family: 'Josefin Sans',
     sans-serif;
     font-family: 'Poppins',
     sans-serif;
-    width: 1440px;
-    height: 3306px;
-    
     background: #f6f2f2e6;
 }
 
@@ -73,18 +71,21 @@ ul, li,i{
     width: 196px;
     height: 44px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    column-gap: 8px;
-    border-radius:24px;
+    /* column-gap: 8px; */
+    border-radius: 24px;
     background-color: #E02C6D;
 }
-
+.preebook-link{
+    margin-left: 24px;
+}
 .preebook a, .fa-arrow-right-long{
     color:white;
     text-decoration: none;
     font-size: 16px;
-    position: relative;
-    left:30px;
+    /* position: relative;
+    left:30px; */
 }
 .camera{
     background-image: url(images/Circle\ design.svg);
@@ -267,3 +268,104 @@ footer{
 }
  /****************** footer section end **************************/
 
+
+
+/*************************** Media query start *********************/
+
+
+@media only screen and (max-width:688px) {
+    main{
+        margin: 0;
+    }
+    .nav-bar{
+        flex-direction: column;
+        align-items: center;
+    }
+    ul,
+    li,
+    i {
+        flex-direction: column;
+        row-gap: 24px;
+        align-items: center;
+    }
+   .top-section{
+       flex-direction: column;
+   }
+   .preebook{
+       margin-left: 50px;
+   }
+   .camera{
+       margin-top: 100px;
+   }
+/* .camera:hover {
+    transform: scale(1.3);
+    transition: transform 2s ease-in-out;
+} */
+
+.camera img {
+    /* border-radius: 50%; */
+    width: 100%;
+    /* height: 414px; */
+}
+   .horizontal-line{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+   }
+.horizontal-line img {
+    width: 50px;
+    height: 26px;
+    
+}
+.image-collections {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    /* align-items: center;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px; */
+
+}
+.collection {
+    /* background-color: #FFFFFF;
+    padding: 15px;
+    margin-top: 30px; */
+    width: 100%;
+    height: 100%;
+    /* box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 5px; */
+
+}
+.collection img {
+    width: 100%;
+    height: 256px;
+
+}
+.collection:hover {
+
+    transform: scale(1.3);
+    transition: transform 1.5s ease-in-out;
+}
+.fourth-section {
+    flex-direction: column;
+    align-items: center;
+    grid-column-gap: 96px;
+    margin-bottom: 100px;
+}
+
+.fourth-section img {
+    width: 100%;
+    height: 270px;
+}
+.join-now{
+    margin-left: 100px;
+}
+footer{
+    width: 100%;
+}
+}
+
+
+/*************************** Media query end *********************/
